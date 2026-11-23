@@ -166,7 +166,7 @@ EFI_STATUS EFIAPI UefiMain(
   if (EFI_ERROR(status)) {
     status = GetMemoryMap(&memmap);
     if (EFI_ERROR(status)) {
-      Print(L"faild to get memory map: %r\n", status);
+      Print(L"failed to get memory map: %r\n", status);
       while (1);
     }
     status = gBS->ExitBootServices(image_handle, memmap.map_key);
